@@ -2,8 +2,12 @@
  * GET /
  * Home page.
  */
-exports.index = (req, res) => {
-  res.render('home', {
-    title: 'Home'
-  });
+module.exports = function (ns) {
+  const toReturn = {};
+  toReturn.index = (req, res) => {
+    res.render('home', {
+      title: 'Home'
+    });
+  };
+  return toReturn;
 };
